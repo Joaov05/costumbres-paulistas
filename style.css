@@ -1,0 +1,243 @@
+@import url(//fonts.googleapis.com/css?family=Lato:300:400);
+
+body {
+  margin:0;
+  background: linear-gradient(to bottom, #fff 70%, rgba(189, 189, 189, 0.74));
+}
+main{
+    min-width: 400px;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: #e3cece;
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.178);
+    margin-bottom: 30px;
+    border-radius: 20px;
+}
+
+h1 {
+  font-family: 'Lato', sans-serif;
+  font-weight:300;
+  letter-spacing: 2px;
+  font-size:48px;
+  margin: 0px;
+}
+p {
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 1px;
+  font-size:18px;
+  color: #000000;
+}
+.slider{
+  margin: 0 auto;
+  min-width: 400px;
+  max-width: 800px;
+  overflow: hidden;
+}
+.slides{
+  width: 400%; 
+  height: 400px; 
+  display: flex;
+}
+.slides input{ 
+  display: none;
+}
+.slide{
+  width: 25%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+.text-container {
+  width: 70%;
+  height: 100%;
+  background-image: linear-gradient(to right, transparent, #ffffff 40%);
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.014);
+}
+.text-container :where(h2, p) {
+  width: 60%;
+}
+.text-container h2 {
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+}
+.text-container p {
+  font-family: 'Lato', sans-serif;
+  padding-inline: 10px;
+  box-sizing: border-box;
+}
+.first {
+  background-image: url("https://s2.glbimg.com/AEgsN3dVOFB81j4T5DYVJ4vpE20=/0x0:1280x960/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2020/h/G/HBwFXoQAC1V1P8KUrVNQ/transporte.jpeg");
+  background-size: cover;
+  border-radius: 20px;
+}
+.second{
+  background-image: url("https://f.i.uol.com.br/folha/cotidiano/images/16166122.jpeg");
+  background-size: cover;
+  border-radius: 20px;
+}
+.th{
+  background-image: url("https://cdn.dooca.store/1390/posts/harmonizacao-de-vinhos-pizza-margherita-pontocom-pizza-1024x681-opt.jpg?v=1632226717&webp=0");
+  background-size: cover;
+  border-radius: 20px;
+}
+.fo{
+  background-image: url("https://www.pontorh.com.br/y/2960/atraso-trabalho-e1473097348496.jpg");
+  background-size: cover;
+  border-radius: 20px;
+}
+.slide img{
+  min-width: 400px;
+  max-width: 800px;
+}
+.manual-navigation{ 
+  position: absolute; 
+  width: 800px; 
+  margin-top: -40px; 
+  display: flex; 
+  justify-content: center;
+}
+.manual-btn{
+  border: 2px solid #FFF;
+  border-radius: 10px;
+  padding: 5px;
+  cursor: pointer;
+  transition: 1s;
+}
+.manual-btn:not(:last-child){
+   margin-right: 40px;
+}
+.manual-btn:hover{
+  background-color: #FFF;
+}
+#radio1:checked ~ .first{
+   margin-left: 0; 
+   transition: 2s;
+}
+#radio2:checked ~ .first{ 
+  margin-left: -25%;
+  transition: 2s;
+}
+#radio3:checked ~ .first{ 
+  margin-left: -50%;
+  transition: 2s;
+}
+#radio4:checked ~ .first{ 
+  margin-left: -75%;
+  transition: 2s;
+}
+.navigation-auto div{ 
+  border: 2px solid #20a6ff;
+  padding: 5px; 
+  border-radius: 10px; 
+  cursor: pointer; 
+  transition: 1s; 
+}
+.navigation-auto{ 
+  position: absolute; 
+  width: 800px; 
+  margin-top: 360px; 
+  display: flex; 
+  justify-content: center;
+}
+.navigation-auto div:not(:Last-child){ 
+  margin-right: 40px;
+}
+#radio1:checked ~ .navigation-auto .auto-btn1{
+  background-color:#FFF;
+}
+#radio2:checked ~ .navigation-auto .auto-btn2{
+  background-color: #FFF;
+}
+#radio3:checked ~ .navigation-auto .auto-btn3{
+  background-color:#FFF;
+}
+#radio4:checked ~ .navigation-auto .auto-btn4{
+  background-color:#FFF;
+}
+.header {
+  position:relative;
+  text-align:center;
+  background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
+  color: white;
+}
+
+.inner-header {
+  height:65vh;
+  width:100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.inner-header > p{
+  font-family: 'Lato', sans-serif;
+  color: #FFF;
+  font-size: 20px;
+}
+.waves {
+  position:relative;
+  width: 100%;
+  height:15vh;
+  margin-bottom:-7px; /*Fix for safari gap*/
+  min-height:100px;
+  max-height:150px;
+}
+
+.content {
+  position:relative;
+  height:20vh;
+  text-align:center;
+  background-color: white;
+}
+
+/* Animation */
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+   transform: translate3d(-90px,0,0);
+  }
+  100% { 
+    transform: translate3d(85px,0,0);
+  }
+}
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+  .waves {
+    height:40px;
+    min-height:40px;
+  }
+  .content {
+    height:30vh;
+  }
+  h1 {
+    font-size:24px;
+  }
+}
